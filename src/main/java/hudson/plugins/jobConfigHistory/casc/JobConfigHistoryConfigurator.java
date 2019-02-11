@@ -1,9 +1,10 @@
-package hudson.plugins.jobConfigHistory;
+package hudson.plugins.jobConfigHistory.casc;
 
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
 
 import hudson.Extension;
+import hudson.plugins.jobConfigHistory.JobConfigHistory;
 import io.jenkins.plugins.casc.Attribute;
 import io.jenkins.plugins.casc.BaseConfigurator;
 import io.jenkins.plugins.casc.ConfigurationContext;
