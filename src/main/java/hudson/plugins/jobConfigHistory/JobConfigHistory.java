@@ -37,6 +37,7 @@ import org.apache.commons.lang.StringUtils;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
 
+import hudson.ExtensionList;
 import hudson.Plugin;
 import hudson.XmlFile;
 import hudson.maven.MavenModule;
@@ -104,6 +105,15 @@ public class JobConfigHistory extends Plugin {
 	private static final Logger LOG = Logger
 			.getLogger(JobConfigHistory.class.getName());
 
+    /**
+     * Gets the singleton instance.
+     *
+     * @return the singleton instance.
+     */
+    public static JobConfigHistory getInstance() {
+        return ExtensionList.lookup(JobConfigHistory.class).get(JobConfigHistory.class);
+    }
+	
 	@Override
 	public void start() throws Exception {
 		load();
